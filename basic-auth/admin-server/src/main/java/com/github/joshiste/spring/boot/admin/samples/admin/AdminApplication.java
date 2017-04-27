@@ -46,12 +46,6 @@ public class AdminApplication extends WebSecurityConfigurerAdapter {
 				.addFilterAfter(csrfHeaderFilter(), CsrfFilter.class);
 	}
 
-	/*@Bean
-	@ConfigurationProperties("spring.boot.admin.auth")
-	public BasicAuthFilter basicAuthFilter() {
-		return new BasicAuthFilter();
-	}*/
-
 	private Filter csrfHeaderFilter() {
 		return new OncePerRequestFilter() {
 			@Override

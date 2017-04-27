@@ -3,7 +3,7 @@ server:
 
 management:
   context-path: /mgmt
-  
+
 security:
   user:
     name: user
@@ -13,12 +13,13 @@ spring:
   boot:
     admin:
       url: http://localhost:8080
-      auth:
-        username: mgmt
-        password: drowssap
+      client:
+        metadata:
+          user.name: mgmt
+          user.password: drowssap
   application:
     name: admin-server
-    
+
 logging:
   level:
     org.springframework.security: INFO
